@@ -12,7 +12,17 @@ namespace XeoCrawler.Spells
         private string splType;
         private int splLevel;
 
-        // constructor
+        // constructors
+
+        // default
+        public Spell()
+        {
+            this.Name = "";
+            this.Type = "";
+            this.Level = 1;
+        }
+
+        // standard
         public Spell(string splName, string splType, int splLevel)
         {
             this.Name = splName;
