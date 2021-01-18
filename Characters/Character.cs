@@ -111,7 +111,7 @@ namespace XeoCrawler.Characters
 
         public int BaseAttack(Weapons.Weapon atkWeapon, int atkMultiplier)
         {
-            return ((this.Attack + atkWeapon.wpnDamage) * atkMultiplier);
+            return ((this.Attack + atkWeapon.Damage) * atkMultiplier);
         }
     }
 }
