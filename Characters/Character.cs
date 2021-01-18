@@ -85,6 +85,33 @@ namespace XeoCrawler.Characters
 
         // methods
 
+        // health based methods
 
+        public void Heal(int healValue, int healMultiplier)
+        {
+            this.Health = this.Health + (healValue * healMultiplier);
+        }
+
+        public void TakeDamage(int dmgValue, int dmgMultiplier)
+        {
+            this.Health = Convert.ToInt32(this.Health - (dmgValue * dmgMultiplier) / this.BlockChance());
+        }
+
+        private double BlockChance()
+        {
+            // Generate the random block percentage
+            var rnd = new Random();
+
+            double _blockPercentage = rnd.Next(3);
+
+            return (this.Level * (_blockPercentage * 10)) / 100;
+        }
+
+        // attack based methods
+
+        public int BaseAttack(Weapons.Weapon atkWeapon, int atkMultiplier)
+        {
+            return ((this.Attack + atkWeapon.wpnDamage) * atkMultiplier);
+        }
     }
 }
