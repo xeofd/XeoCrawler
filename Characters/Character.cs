@@ -87,7 +87,7 @@ namespace XeoCrawler.Characters
 
         // health based methods
 
-        public void Heal(int healValue, int healMultiplier)
+        public void RecieveHeal(int healValue, int healMultiplier)
         {
             this.Health = this.Health + (healValue * healMultiplier);
         }
