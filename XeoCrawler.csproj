@@ -9,6 +9,7 @@
     <Folder Include="Characters\NPCs\Bad\" />
     <Folder Include="Characters\NPCs\Good\" />
     <Folder Include="Characters\Player\" />
+    <Folder Include="Spells\Enhance\" />
   </ItemGroup>
 
 </Project>
